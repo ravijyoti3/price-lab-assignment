@@ -7,7 +7,6 @@ const getDateDifference = (date) => {
 };
 
 const addDaysToDate = (days) => {
-  //add days to todays date
   const dateObj = new Date();
   dateObj.setDate(dateObj.getDate() + days);
   return dateObj.toLocaleDateString();
@@ -29,8 +28,7 @@ const exportCsv = (data) => {
 const downloadCsv = (csv) => {
   var csvFile;
   var downloadLink;
-
-  //define the file type to text/csv
+  
   csvFile = new Blob([csv], { type: "text/csv" });
   downloadLink = document.createElement("a");
   downloadLink.download = "address.csv";
